@@ -1,23 +1,31 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
+const int wielkoscTablicy = 46;
 
 int Ile_jest(char tab[], int rozmiar) {
-	int length = sizeof(tab) / sizeof(int);
 	int iloscNiewypelnionych;
 	for (int i = 0; i < rozmiar; i++) {
-		if (tab[i] == 1) {
+		if (tab[i] = NULL) {
 			iloscNiewypelnionych++;
 		}
-		if (tab[i] == 0) {
+		if (tab[i] == 1) {
 			continue;
 		}
 	}
 	return iloscNiewypelnionych;
 }
 
-int Wprowadz() {
+int Wprowadz(char wyjscie[], int zajete[], char znaki[]) {
+	int a = 48, b = 93;
+	int i = rand() % 88;
 
+	while (Ile_jest(wyjscie, wielkoscTablicy) != 0) {
+
+		wyjscie[i] = rand() % (b - a + 1) + a;
+	}
+	
+	
 }
 
 void wyswietl() {
@@ -30,7 +38,6 @@ void wyczysc() {
 
 int main()
 {
-	const int wielkoscTablicy = 21;
 	//cout << "Podaj wielkosc tablicy: " << endl;
 	//cin >> wielkoscTablicy;
 	if (wielkoscTablicy%2 == 1 && wielkoscTablicy < 88) {
