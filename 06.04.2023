@@ -1,0 +1,45 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int Ile_jest(char tab[], int rozmiar) {
+	int length = sizeof(tab) / sizeof(int);
+	int iloscNiewypelnionych;
+	for (int i = 0; i < rozmiar; i++) {
+		if (tab[i] == 1) {
+			iloscNiewypelnionych++;
+		}
+		if (tab[i] == 0) {
+			continue;
+		}
+	}
+	return iloscNiewypelnionych;
+}
+
+int Wprowadz() {
+
+}
+
+void wyswietl() {
+
+}
+
+void wyczysc() {
+
+}
+
+int main()
+{
+	const int wielkoscTablicy = 21;
+	//cout << "Podaj wielkosc tablicy: " << endl;
+	//cin >> wielkoscTablicy;
+	if (wielkoscTablicy%2 == 1 && wielkoscTablicy < 88) {
+		char wyjscie[wielkoscTablicy];
+	}
+	else {
+		cout << "Za duza tablica, nie ma tyle pamieci" << endl;
+	}
+	int zajete[wielkoscTablicy];
+	char znaki[45];
+	return 0;
+}
