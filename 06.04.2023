@@ -2,11 +2,14 @@
 #include <cstdlib>
 using namespace std;
 const int wielkoscTablicy = 46;
+int zajete[wielkoscTablicy];
+char znaki[45];
+char wyjscie[wielkoscTablicy];
 
 int Ile_jest(char tab[], int rozmiar) {
-	int iloscNiewypelnionych;
+	int iloscNiewypelnionych = 0;
 	for (int i = 0; i < rozmiar; i++) {
-		if (tab[i] = NULL) {
+		if (tab[i] == NULL) {
 			iloscNiewypelnionych++;
 		}
 		if (tab[i] == 1) {
@@ -21,8 +24,10 @@ int Wprowadz(char wyjscie[], int zajete[], char znaki[]) {
 	int i = rand() % 88;
 
 	while (Ile_jest(wyjscie, wielkoscTablicy) != 0) {
-
 		wyjscie[i] = rand() % (b - a + 1) + a;
+		zajete[i] = 1;
+		znaki[i] = wyjscie[i];
+
 	}
 	
 	
@@ -41,12 +46,11 @@ int main()
 	//cout << "Podaj wielkosc tablicy: " << endl;
 	//cin >> wielkoscTablicy;
 	if (wielkoscTablicy%2 == 1 && wielkoscTablicy < 88) {
-		char wyjscie[wielkoscTablicy];
+
 	}
 	else {
 		cout << "Za duza tablica, nie ma tyle pamieci" << endl;
 	}
-	int zajete[wielkoscTablicy];
-	char znaki[45];
+
 	return 0;
 }
